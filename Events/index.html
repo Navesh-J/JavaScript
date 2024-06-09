@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper {
+        margin-top: 6rem;
+        display: grid;
+        place-content: center;
+        height: 8rem;
+        width: 8rem;
+        min-height: 50vh;
+        width: 50%;
+        border: 4rem solid blue;
+        background-color: black;
+    }
+</style>
+
+<body>
+    <div class="wrapper" id="toggle">
+        <button id="btn" style="cursor: pointer;">Click me!</button>
+    </div>
+</body>
+<script>
+    let btn = document.getElementById("btn");
+    let toggle = document.getElementById("toggle");
+
+    btn.addEventListener("click", () => {
+        document.body.style.backgroundColor = "black"
+        toggle.style.backgroundColor = "yellow"
+        alert("You Clicked the BUTTON !!")
+    })
+
+    function getRandomColor() {
+        let a = Math.ceil(0 + Math.random() * 255);
+        let b = Math.ceil(0 + Math.random() * 255);
+        let c = Math.ceil(0 + Math.random() * 255);
+        return `rgb(${a},${b},${c})`;
+    }
+
+    setInterval(() => {
+        document.body.style.backgroundColor=getRandomColor();
+        toggle.style.backgroundColor=getRandomColor();
+    }, 5000);
+
+</script>
+
+</html>
