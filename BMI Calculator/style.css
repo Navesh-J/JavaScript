@@ -1,0 +1,35 @@
+body{
+    background-color: #212121;
+    color: #fff;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 4rem;
+    align-items: center;
+}
+label{
+    margin-right: 2rem;
+    font-size: 1.2rem;
+}
+button{
+    padding: 1rem;
+    border-radius: .8rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.guide{
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+}
+.result{
+    color: aqua;
+    font-weight: 300;
+}
